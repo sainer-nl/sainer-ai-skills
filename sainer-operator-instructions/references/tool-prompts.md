@@ -52,12 +52,19 @@ external system, or search a knowledge source. The user authors these text field
   - By topic: "Use for billing questions — invoices, payments, refunds, debtors."
   - By name only: "Only if the caller asks for this person by name."
   Make each destination's scope distinct so they don't overlap. No scripts or "say X".
-- **Routing guidance** — cross-cutting rules that span destinations: urgency overrides
-  ("treat a safety issue as urgent and route to the workshop"), tiebreakers for
-  multi-topic calls, anything the operator should never ask just to route (a postcode,
-  an account number), and how to frame a stand-in when a destination is closed. Keep the
-  per-destination "when to route here" in the descriptions; routing guidance carries only
-  what spans them.
+- **Routing guidance** — cross-cutting rules that span destinations. Crucial to understand who
+  reads this: routing guidance and the destination descriptions are consumed **only by the routing
+  model** that picks the destination — **never by the voice model on the call** (the voice model
+  sees destination names only and just relays the routing model's questions). So write routing
+  guidance as *routing decision criteria*, not call behaviour. It can set tiebreakers for
+  multi-topic calls, urgency/priority overrides between destinations, what the router must never ask
+  the caller just to route (a postcode, an account number), how to frame a stand-in when a
+  destination is closed, and how the router should word a confirmation or clarifying question. It
+  cannot invent destinations, override a destination's description, or invent a closure the
+  descriptions don't state. **Never put voice-model behaviour here** — whether to transfer at all,
+  answering from the knowledge base, or running a data-collection flow are the voice model's job and
+  belong in the Instructions, not routing guidance. Keep each destination's "when to route here" in
+  its description; routing guidance carries only what spans them.
 
 ---
 
