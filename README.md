@@ -8,6 +8,7 @@
 [![Standard](https://img.shields.io/badge/agentskills.io-compatible-22c55e)](https://agentskills.io)
 [![Website](https://img.shields.io/badge/sainer.nl-website-0ea5e9)](https://sainer.nl)
 [![Docs](https://img.shields.io/badge/docs.sainer.nl-docs-8b5cf6)](https://docs.sainer.nl)
+[![License](https://img.shields.io/badge/license-MIT-blue)](./LICENSE)
 
 </div>
 
@@ -79,5 +80,6 @@ non-public, customer-specific, or internal implementation detail.
 
 ## License
 
-To be decided. Until a license is added here, treat the contents as © Sainer, all rights
-reserved.
+[MIT](./LICENSE) © 2026 Sainer. Use, copy, and adapt these skills freely; just keep the
+copyright and permission notice. The license covers the skill content only — it grants no
+rights to the "Sainer" name or brand.
