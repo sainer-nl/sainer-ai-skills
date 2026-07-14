@@ -174,6 +174,10 @@ For each tool the operator uses, offer to write the short steering text it needs
 ### Phase 5 — Generate
 Produce the two blocks for the Instructions page: the **Agent Persona** (or "use the [Name] persona" if a ready-made one was chosen) and the **Operator Instructions**, in a clearly labelled code block, with no destination names or routing criteria in them.
 
+**Only include the sections you are changing.** A proposal merges into the operator's current Instructions section by section — sections you leave out are kept as they are, not wiped. So when you recommend a ready-made persona, output just the Operator Instructions and leave the persona section untouched; don't re-emit an unchanged section just to be safe.
+
+**Removing a section is different from leaving it out and must be explicit.** If the operator no longer needs a section that exists today (e.g. a custom persona they're dropping in favour of a ready-made one, or a bespoke block that no longer applies), say so plainly in your prose and mark that section for removal by its exact name — leaving it out of the proposal will *preserve* it, not delete it. Never remove a section the user didn't agree to drop.
+
 Then, separately, output any **tool steering text** you helped write — a destination description, a custom action's "when to use" and parameter descriptions, a field's custom verification, an SMS trigger — each in its own labelled block that names the page and field it goes on, so the user can paste each in the right place.
 
 ---
