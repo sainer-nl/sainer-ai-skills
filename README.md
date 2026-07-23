@@ -4,7 +4,7 @@
 
 **Public [Agent Skills](https://agentskills.io) for building and tuning [Sainer](https://sainer.nl) AI phone operators.**
 
-[![Skills](https://img.shields.io/badge/skills-1-2563eb)](#skills)
+[![Skills](https://img.shields.io/badge/skills-2-2563eb)](#skills)
 [![Standard](https://img.shields.io/badge/agentskills.io-compatible-22c55e)](https://agentskills.io)
 [![Website](https://img.shields.io/badge/sainer.nl-website-0ea5e9)](https://sainer.nl)
 [![Docs](https://img.shields.io/badge/docs.sainer.nl-docs-8b5cf6)](https://docs.sainer.nl)
@@ -30,6 +30,7 @@ and carries its own instructions and reference material.
 | Skill | What it does |
 |-------|--------------|
 | [`sainer-operator-instructions`](./sainer-operator-instructions) | Interviews you about your business and writes the **Instructions** and persona for your Sainer phone operator — the opening, the call flow, the tone, and the short steering text the operator's tools need. |
+| [`writing-agent-skills`](./writing-agent-skills) | Teaches an agent how to **write Agent Skills themselves** — scaffolding a `SKILL.md`, writing descriptions that trigger reliably, bundling scripts, and running evals. A condensed, source-referenced snapshot of the [agentskills.io](https://agentskills.io) documentation. |
 
 ## Install
 
