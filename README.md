@@ -29,7 +29,7 @@ and carries its own instructions and reference material.
 
 | Skill | What it does |
 |-------|--------------|
-| [`sainer-operator-instructions`](./sainer-operator-instructions) | Interviews you about your business and writes the **Instructions** and persona for your Sainer phone operator — the opening, the call flow, the tone, and the short steering text the operator's tools need. |
+| [`sainer-operator-instructions`](./sainer-operator-instructions) | Interviews you about your business and builds your Sainer phone operator — the **Instructions** and persona, plus the steering text its transfers, data collection, custom actions, messages and vocabulary need. |
 | [`writing-agent-skills`](./writing-agent-skills) | Teaches an agent how to **write Agent Skills themselves** — scaffolding a `SKILL.md`, writing descriptions that trigger reliably, bundling scripts, and running evals. A condensed, source-referenced snapshot of the [agentskills.io](https://agentskills.io) documentation. |
 
 ## Install
