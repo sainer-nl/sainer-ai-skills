@@ -33,6 +33,8 @@ most common way an operator ends up hard to maintain and worse on calls.
 | **Custom actions** | Lookups and external calls, and how to speak their results |
 | **Messages & keypad** | Texts the operator sends, tones it presses |
 | **Vocabulary** | How to pronounce tricky names |
+| **Call analysis** | What to extract from every call once it has ended |
+| **Schedules** | Opening hours, and when a destination may be transferred to |
 | **Settings** | Languages, voice, which tools are on |
 
 Two of these are read by a **different model** than the one talking to the
@@ -40,12 +42,13 @@ caller: transfer destination descriptions and routing guidance are read only by
 the routing model. That distinction changes how you write them — see
 [references/transfers.md](references/transfers.md).
 
-## References — read the one you need
+## References — find the one you need
 
-Do not read these up front. Read the reference for the area you are actually
-working on, when you get there.
+Every reference below is part of this guide. Use this table to jump to the one
+covering the area you are working on, and follow it closely — it is more
+specific than the general rules above, and where they differ it wins.
 
-| Read this | When |
+| Use this | When |
 |-----------|------|
 | [output-format.md](references/output-format.md) | Writing the Instructions or a persona — the required format |
 | [where-things-belong.md](references/where-things-belong.md) | Something surfaced and you are unsure which piece owns it |
@@ -53,7 +56,9 @@ working on, when you get there.
 | [data-collection.md](references/data-collection.md) | Fields and scenarios — capturing details from callers |
 | [custom-actions.md](references/custom-actions.md) | Lookups, external systems, speaking a result |
 | [messaging.md](references/messaging.md) | Text messages and keypad actions |
-| [voice-and-language.md](references/voice-and-language.md) | Pronunciation, vocabulary, which languages to handle |
+| [timetables.md](references/timetables.md) | Opening hours, appointments offered on closed days, a destination that should not be reachable at night |
+| [call-analysis.md](references/call-analysis.md) | Something the business needs to know about every call — custom analysis fields, and what drives a notification rule |
+| [voice-and-language.md](references/voice-and-language.md) | The operator sounds too cheerful / stiff / rushed; personality, voice, turn-taking, pronunciation, which languages to handle |
 
 ---
 
@@ -64,6 +69,13 @@ operator follows English most reliably, and the language it *speaks* is a
 separate setting. The one exception is a **required spoken line** — a mandatory
 opening, an AI disclosure — which you write in the operator's own language,
 framed as a structure that still adapts when the caller switches.
+
+**Use the product's own words.** The thing being configured is an **operator**,
+not an assistant, an agent, a bot or an AI. The person on the phone is a
+**caller**, what they are having is a **call**, and what you write for the
+operator is its **Instructions**. Say this consistently in what you write for
+the user and in what you write for the operator; a description that calls it
+"the assistant" leaves the reader guessing what it refers to.
 
 **Describe intent, not mechanics.** "Look it up in your knowledge base",
 "connect them to a colleague" — never internal tool or function names. The

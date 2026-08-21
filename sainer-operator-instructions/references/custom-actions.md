@@ -32,9 +32,38 @@ API expects:
 - `order_number` → "The caller's order number, usually six digits."
 - `postcode` → "The postcode of the delivery address, not the billing address."
 
+## How the response reaches the operator
+
+An action's response can reach the operator three ways, and the choice decides
+which of the fields below actually does anything.
+
+| Mode | What happens | Cost |
+|------|--------------|------|
+| **Processed by AI** (default) | A second model reads the response and summarises it | An extra model round trip mid-call, growing with the size of the response |
+| **Filtered by parser** | A generated parser reduces the response to the records that matter, and the operator reads those directly | No extra round trip |
+| **Raw response** | The operator reads the response verbatim | No extra round trip, but only workable when the response is already small and speakable |
+
+Recommend the parser when an action returns a big or repetitive payload — a
+list of branches, a product catalogue, a search result — and the operator only
+needs a few fields from it. That is where the extra round trip costs the most
+and buys the least. Leave an action on the interpretation model when the
+response is small, or when what to say about it genuinely depends on the
+conversation.
+
+**On a parser action, the interpretation instructions no longer run.** The
+operator reads the parser's output directly. So if someone complains their
+action says the wrong thing and it is on the parser, the fix is the
+response-shape goal, not the interpretation instructions — rewriting those
+changes nothing they will ever hear.
+
+The one exception: an action set to the parser that never had a parser
+generated falls back to interpretation. If the mode says parser but no parser
+exists, that is the thing to fix first, and it is fixed in the app.
+
 ## Interpretation instructions
 
-How to turn the result into something spoken. Cover three things:
+How to turn the result into something spoken. Only used when the action is on
+the interpretation model. Cover three things:
 
 - what to mention — "give the next delivery date and the carrier"
 - what to leave out — internal codes, prices the caller should not hear
