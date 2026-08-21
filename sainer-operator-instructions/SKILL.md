@@ -51,7 +51,7 @@ specific than the general rules above, and where they differ it wins.
 | Use this | When |
 |-----------|------|
 | [output-format.md](references/output-format.md) | Writing the Instructions or a persona — the required format |
-| [where-things-belong.md](references/where-things-belong.md) | Something surfaced and you are unsure which piece owns it |
+| [where-things-belong.md](references/where-things-belong.md) | Something surfaced and you are unsure which piece owns it — or whether it is the customer's to change at all |
 | [transfers.md](references/transfers.md) | Destinations, routing guidance, when to connect a caller |
 | [data-collection.md](references/data-collection.md) | Fields and scenarios — capturing details from callers |
 | [custom-actions.md](references/custom-actions.md) | Lookups, external systems, speaking a result |
