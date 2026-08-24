@@ -44,9 +44,12 @@ the routing model. That distinction changes how you write them — see
 
 ## References — find the one you need
 
-Every reference below is part of this guide. Use this table to jump to the one
-covering the area you are working on, and follow it closely — it is more
-specific than the general rules above, and where they differ it wins.
+Every reference in this table is part of this guide. Find the one covering the
+area you are working on and read it before you write for that area — it is more
+specific than the general rules above, and where they differ it wins. Depending
+on how this guide was loaded a reference may already be in front of you or may
+need fetching by name; either way, do not write for an area whose reference you
+have not read.
 
 | Use this | When |
 |-----------|------|
