@@ -74,8 +74,12 @@ Left empty, a sensible default subject is used. When the user wants their own,
 these placeholders are filled in per call:
 
 `{caller_name}` · `{caller_number}` · `{called_number}` · `{phone_number}` ·
-`{direction}` · `{call_date}` · `{summary}` · `{caller_company}` ·
-`{caller_intent}` · `{sentiment}`
+`{direction}` · `{call_date}` · `{caller_company}` · `{caller_intent}` ·
+`{sentiment}`
+
+There is deliberately no summary placeholder. A summary is a paragraph of
+prose, which makes an unreadable subject line, and the body already opens with
+it. Asking for one is refused rather than quietly dropped.
 
 There is one more: `{action}`, which is empty unless the call left action items,
 so it works as a flag at the front of a subject. `{action:SPOED}` uses your own
