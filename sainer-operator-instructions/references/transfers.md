@@ -137,6 +137,34 @@ If a destination's staff speak only some of the operator's languages, set them.
 A caller speaking outside that list gets a warning before the transfer fires,
 instead of being handed to someone who cannot help them.
 
+## Hold phrase
+
+What the caller hears right after a transfer starts, while the routing model
+decides who to connect. Unlike everything above, this IS voice-model behaviour:
+it changes what is spoken, not where the call routes. It is a setting on the
+Transfers page (`transfer_hold_phrase`), never a scripted wait line in the
+Instructions. Three modes:
+
+- **`default`** — a fixed per-language hold phrase ("Een ogenblik geduld
+  alstublieft, ik kijk wie u kan helpen."). Reliable but noticeably scripted;
+  the safe choice.
+- **`composed`** — the operator words the hold sentence itself, in the caller's
+  language and in persona. Recommend this when a customer finds the standard
+  phrase robotic or cold. Optionally steer it with `holdPhrasePrompt`: English
+  intent text, one short sentence's worth, positively phrased.
+
+  > Warmly acknowledge what the caller needs and say you are checking who can
+  > best help them.
+
+  Not a literal line to repeat, and never an announcement that a transfer is
+  already decided — the routing model may still come back with a question
+  instead of a connection.
+- **`audio_only`** — no spoken phrase, only a short typing sound. Only
+  appropriate when the Instructions make the operator ask permission before
+  transferring, so the silence follows a natural "yes". It depends on the
+  operator's typing sound setting being on; with that off this mode is dead
+  air, so check it before proposing this.
+
 ## Routing guidance
 
 Cross-cutting rules that span destinations. Everything specific to one
@@ -194,3 +222,4 @@ system. Without one, those calls have nowhere to go.
 - [ ] Pre-transfer notices are intent in English, never a literal quoted sentence
 - [ ] Routing guidance contains nothing that belongs in a single description
 - [ ] There is a fallback
+- [ ] `audio_only` hold phrase only proposed with the typing sound on and a consent-question transfer flow

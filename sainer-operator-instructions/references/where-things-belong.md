@@ -11,6 +11,7 @@ the Instructions. The need → page lookup:
 | Whether a destination needs the caller to confirm, or is a catch-all, or whether its name may be spoken | That destination's settings on **Transfers** |
 | Which languages a destination's staff speak (so callers get a heads-up) | That destination's **spoken languages** setting |
 | Cross-cutting routing rules that span destinations (read only by the routing model, never by the voice model — write as routing decision criteria; see [transfers.md](transfers.md)) | The **routing context** (set alongside Transfers, not in the Instructions) |
+| What the caller hears while a transfer is being routed (the hold phrase: fixed sentence, own wording, or sound only; see [transfers.md](transfers.md)) | The **hold phrase** setting on the **Transfers** page — never a scripted wait line in the Instructions |
 | What a detail to capture is, and how to ask for it | That **field**'s description in **Data collection** |
 | Overriding the default confirmation for a captured detail | That field's **custom verification** in **Data collection** (sensible defaults already exist) |
 | Which details to capture, and when | A **scenario** in **Data collection** — a separate item that links fields to a situation |
