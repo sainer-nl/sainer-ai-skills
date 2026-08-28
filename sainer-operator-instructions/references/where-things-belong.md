@@ -16,6 +16,7 @@ the Instructions. The need → page lookup:
 | Overriding the default confirmation for a captured detail | That field's **custom verification** in **Data collection** (sensible defaults already exist) |
 | Which details to capture, and when | A **scenario** in **Data collection** — a separate item that links fields to a situation |
 | When the operator should run a lookup or external call, and how to read back the result | That **custom action**'s description, parameters, and interpretation instructions |
+| Telling a colleague by email once a call has ended, and which calls should do that | An **email notification** on the **Email notifications** page (see [email-notifications.md](email-notifications.md)) |
 | When the operator should text the caller, and the message | That message's **"when to send"** and body under **Send SMS** |
 | When the operator should press keypad tones | That action's **"when to use"** under **Keypad actions** |
 | Opening / supported languages, voice, gender, which tools are on, a pre-recorded welcome | The operator **Settings** |
