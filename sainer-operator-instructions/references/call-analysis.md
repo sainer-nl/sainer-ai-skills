@@ -103,7 +103,9 @@ topics, say so and save them a field.
 Say the payoff concretely rather than leaving it abstract:
 
 - **Notifications.** A fixed value is the cleanest condition an email rule can
-  have. This is the strongest case for a custom field and worth naming first.
+  have. This is the strongest case for a custom field and worth naming first. You
+  can set the rule up in the same conversation — see
+  [email-notifications.md](email-notifications.md).
 - **Reports.** The field is aggregated automatically — counts per value across
   the period, with no extra work.
 - **The dashboard.** A numeric field can be pinned as a card. Three maximum.
