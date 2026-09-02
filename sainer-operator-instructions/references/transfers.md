@@ -137,6 +137,27 @@ If a destination's staff speak only some of the operator's languages, set them.
 A caller speaking outside that list gets a warning before the transfer fires,
 instead of being handed to someone who cannot help them.
 
+## Ring duration
+
+How long a destination rings before the operator gives up and takes the caller
+back (`ring_timeout_seconds`, 10 to 120 seconds). Left empty it is 30 seconds,
+which is what every destination did before it was configurable, so leave it
+alone unless the customer asks.
+
+Shorten it when waiting is the worse outcome: a back-office line that is often
+unstaffed is better given up on after 15 seconds so the operator can take a
+message. Lengthen it when the destination is worth waiting for, such as a desk
+where someone reliably picks up but takes a while to reach the phone.
+
+Two limits worth knowing before you promise a number:
+
+- It does not apply to a destination that transfers via the customer's own phone
+  system (`refer` mode). There the phone system decides how long the phone
+  rings, and this setting is ignored.
+- A destination whose phone system never starts ringing at all still fails after
+  about 5 seconds, whatever this is set to. Ring duration only governs how long
+  we wait once it *has* started ringing.
+
 ## Hold phrase
 
 What the caller hears right after a transfer starts, while the routing model
