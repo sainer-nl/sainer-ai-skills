@@ -59,6 +59,7 @@ have not read.
 | [data-collection.md](references/data-collection.md) | Fields and scenarios — capturing details from callers |
 | [custom-actions.md](references/custom-actions.md) | Lookups, external systems, speaking a result |
 | [messaging.md](references/messaging.md) | Text messages and keypad actions |
+| [surveys.md](references/surveys.md) | Asking the caller what they thought, or letting them check the details collected from them |
 | [timetables.md](references/timetables.md) | Opening hours, appointments offered on closed days, a destination that should not be reachable at night |
 | [call-analysis.md](references/call-analysis.md) | Something the business needs to know about every call — custom analysis fields, and what drives a notification rule |
 | [email-notifications.md](references/email-notifications.md) | Emailing colleagues after a call: who gets one, and the rule deciding which calls trigger it |

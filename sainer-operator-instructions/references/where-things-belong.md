@@ -20,6 +20,9 @@ the Instructions. The need → page lookup:
 | Telling a colleague by email once a call has ended, and which calls should do that | An **email notification** on the **Email notifications** page (see [email-notifications.md](email-notifications.md)) |
 | When the operator should text the caller, and the message | That message's **"when to send"** and body under **Send SMS** |
 | When the operator should press keypad tones | That action's **"when to use"** under **Keypad actions** |
+| When the operator should offer the caller a survey about the call, and the text that carries the link (see [surveys.md](surveys.md)) | That survey's **"when to offer it"** and message body under **Send survey** |
+| Texting the caller a survey after every qualifying call, and which calls qualify (see [surveys.md](surveys.md)) | The **automatic send** settings under **Send survey** — separate from whether the operator may offer one during a call |
+| Letting the caller check and correct the details a scenario collected, after the call (see [surveys.md](surveys.md)) | That scenario's **caller verification** setting in **Data collection** — the form is generated from the fields, so improve the **field labels** rather than writing one |
 | Opening / supported languages, voice, gender, which tools are on, a pre-recorded welcome | The operator **Settings** |
 
 For how to phrase any of these tool fields, see [transfers.md](transfers.md).
