@@ -63,6 +63,14 @@ a scenario that lists one trigger fires on one trigger. Typical triggers:
 
 **Attach the fields.** A scenario collects exactly the fields linked to it.
 
+**Only after a booking** (`requires_booking`) — for a follow-up that only makes
+sense once something was actually booked in the same call, such as offering a
+mortgage advisor after a viewing. The operator cannot select the scenario until
+an integration booking has succeeded on that call; before that it is refused in
+code, so no amount of prompt drift can start it. Leave it off for everything
+else. Mention the follow-up in the Instructions right after the booking step,
+but do not rely on the prompt as the gate.
+
 ---
 
 ## Writing a scenario is usually two changes, not one
