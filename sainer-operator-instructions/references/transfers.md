@@ -158,6 +158,28 @@ Two limits worth knowing before you promise a number:
   about 5 seconds, whatever this is set to. Ring duration only governs how long
   we wait once it *has* started ringing.
 
+## If the transfer fails
+
+What the operator offers the caller when a transfer to this destination does not
+go through: declined, not answered, unreachable (`failure_alternatives`). A list
+of any of `callback`, `message`, `sms`, `call_back_later`.
+
+Left empty, which is the default for every destination, the operator helps with
+the request itself where it can, otherwise offers to take a message or arrange a
+callback. It never asks "is there anything else I can help you with?" after a
+failed transfer, because the caller's first request is still open. So do not
+write a failed-transfer script in the Instructions; this setting owns it.
+
+Set it when that default does not fit the destination: a sales line where a
+callback is the only useful follow-up (`callback`), a desk that answers most
+questions by text (`sms`), or a line with nobody to call back (`call_back_later`).
+
+Options the operator cannot actually perform on the call are skipped silently:
+`callback` and `message` need data collection switched on, `sms` needs at least
+one SMS template. If none of the chosen options is possible the operator offers
+nothing rather than falling back to the default, so check those tools are on
+before you propose it. Not used for internal handoffs.
+
 ## Hold phrase
 
 What the caller hears right after a transfer starts, while the routing model
@@ -243,4 +265,5 @@ system. Without one, those calls have nowhere to go.
 - [ ] Pre-transfer notices are intent in English, never a literal quoted sentence
 - [ ] Routing guidance contains nothing that belongs in a single description
 - [ ] There is a fallback
+- [ ] Any `failure_alternatives` option that needs a tool (data collection, an SMS template) has that tool switched on
 - [ ] `audio_only` hold phrase only proposed with the typing sound on and a consent-question transfer flow
