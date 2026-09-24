@@ -11,6 +11,7 @@ the Instructions. The need → page lookup:
 | Whether a destination needs the caller to confirm, or is a catch-all, or whether its name may be spoken | That destination's settings on **Transfers** |
 | Which languages a destination's staff speak (so callers get a heads-up) | That destination's **spoken languages** setting |
 | How long a destination rings before the operator takes the caller back (see [transfers.md](transfers.md)) | That destination's **ring duration** setting on **Transfers** (empty means 30 seconds) |
+| What the operator offers when a transfer to a destination fails (callback, message, SMS, call back later; see [transfers.md](transfers.md)) | That destination's **If the transfer fails** setting on **Transfers**, never a failed-transfer script in the Instructions |
 | Cross-cutting routing rules that span destinations (read only by the routing model, never by the voice model — write as routing decision criteria; see [transfers.md](transfers.md)) | The **routing context** (set alongside Transfers, not in the Instructions) |
 | What the caller hears while a transfer is being routed (the hold phrase: fixed sentence, own wording, or sound only; see [transfers.md](transfers.md)) | The **hold phrase** setting on the **Transfers** page — never a scripted wait line in the Instructions |
 | What a detail to capture is, and how to ask for it | That **field**'s description in **Data collection** |
@@ -20,6 +21,9 @@ the Instructions. The need → page lookup:
 | Telling a colleague by email once a call has ended, and which calls should do that | An **email notification** on the **Email notifications** page (see [email-notifications.md](email-notifications.md)) |
 | When the operator should text the caller, and the message | That message's **"when to send"** and body under **Send SMS** |
 | When the operator should press keypad tones | That action's **"when to use"** under **Keypad actions** |
+| When the operator should offer the caller a survey about the call, and the text that carries the link (see [surveys.md](surveys.md)) | That survey's **"when to offer it"** and message body under **Send survey** |
+| Texting the caller a survey after every qualifying call, and which calls qualify (see [surveys.md](surveys.md)) | The **automatic send** settings under **Send survey** — separate from whether the operator may offer one during a call |
+| Letting the caller check and correct the details a scenario collected, after the call (see [surveys.md](surveys.md)) | That scenario's **caller verification** setting in **Data collection** — the form is generated from the fields, so improve the **field labels** rather than writing one |
 | Opening / supported languages, voice, gender, which tools are on, a pre-recorded welcome | The operator **Settings** |
 
 For how to phrase any of these tool fields, see [transfers.md](transfers.md).
