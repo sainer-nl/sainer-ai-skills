@@ -57,6 +57,15 @@ The automatic send is inbound-only, and skips calls that were too short, calls
 that reached a colleague (the caller would be rating them, not the operator),
 and callers who were already surveyed recently. Each of those is adjustable.
 
+It can also survey only a share of the calls that qualify. Set the percentage
+when someone wants feedback without texting every caller; 100 is every call, 10
+is roughly one in ten. Which calls get picked is decided per call and never
+changes, so the same call always gets the same answer.
+
+Do not reach for the monthly ceiling to do this. The ceiling surveys everyone
+until the budget runs out and then nobody, so a month's feedback all comes from
+whoever happened to call first. The percentage spreads it across the month.
+
 ### Reading the results
 
 Report the funnel — sent, answered, response rate, average — never the average
