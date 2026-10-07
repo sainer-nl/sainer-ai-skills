@@ -36,27 +36,32 @@ that is right for every caller: making the operator quicker to answer also makes
 it quicker to interrupt someone who paused to think. Change one thing, have them
 listen, then decide.
 
-### "It keeps getting interrupted" takes two settings, not one
+### Interruption is one switch, and "off" means muted
 
-Turning interruption off is only half of it, and the half on its own surprises
-people.
+The app has a single turn-taking switch, **Beller mag onderbreken** (Allow caller
+to interrupt). Switching it off does two things at once: the operator finishes its
+sentence, and whatever the caller says over it is dropped instead of answered
+afterwards. In the config that is `activityHandling: NO_INTERRUPTION` together
+with `muteCallerWhileSpeaking: true`. New operators start this way.
 
-It stops the caller from cutting the operator off mid-sentence. It does **not**
-stop the operator from *hearing* them: the caller's audio keeps streaming
-throughout, so whatever was said over the top is still picked up and answered as
-soon as the operator finishes its turn. On a noisy line — a workshop, a shop
-floor, someone on speakerphone in a car — that is often the actual complaint,
-and switching interruption off alone does not fix it.
+Treat it as that one switch, never as two settings:
 
-The second setting drops the caller's audio while the operator is talking, so
-there is nothing waiting to be answered afterwards. It only takes effect when
-interruption is already off, so the two belong together: **propose them as one
-change, and say what the pair does.**
+- **Do not flag the pair as a risk or a warning.** It is the default, and nothing
+  in the app can separate the two again.
+- **Never propose turning muting off while interruption stays off.** The app
+  cannot produce that state, and the user cannot see or undo it there.
+- To change it, set `activityHandling` only. Switching interruption off mutes as
+  well; switching it on clears the mute keys.
+- The one exception is an older operator stored as `NO_INTERRUPTION` without
+  muting. There the caller can no longer cut the operator off, but anything said
+  over it is still answered once it finishes, which is often the actual
+  complaint. Propose `muteCallerWhileSpeaking: true` to complete the pair, and
+  say it brings the operator in line with what the switch does today.
 
-Both come with a real cost, so say it plainly rather than burying it: the caller
-genuinely cannot break in, and anything they say while the operator is talking is
-gone. That is the right trade for a menu, a legal notice or a noisy line, and the
-wrong one for a conversation where people interrupt each other normally.
+Only raise the switch when the complaint is about rhythm. Interruption on suits a
+conversation where people interrupt each other normally; off suits a menu, a
+legal notice or a noisy line (a workshop, a shop floor, speakerphone in a car),
+at the cost that the caller genuinely cannot break in.
 
 ---
 
