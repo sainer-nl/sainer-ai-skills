@@ -38,6 +38,10 @@ Ask two or three of these at a time, not all five.
 The one field that decides whether a caller reaches the right person. It answers
 a single question: **when should a caller be routed here?**
 
+Destinations a phone system created (BroadWorks) start with only `Name,
+Department, extension 201`. That is a placeholder, not a description: rewrite it
+like any other, see [integrations.md](integrations.md).
+
 Two shapes work:
 
 - **By topic** — "Use for billing questions: invoices, payments, refunds, debtors."

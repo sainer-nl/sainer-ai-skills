@@ -25,6 +25,7 @@ the Instructions. The need → page lookup:
 | Texting the caller a survey after every qualifying call, and which calls qualify (see [surveys.md](surveys.md)) | The **automatic send** settings under **Send survey** — separate from whether the operator may offer one during a call |
 | Letting the caller check and correct the details a scenario collected, after the call (see [surveys.md](surveys.md)) | That scenario's **caller verification** setting in **Data collection** — the form is generated from the fields, so improve the **field labels** rather than writing one |
 | Opening / supported languages, voice, gender, which tools are on, a pre-recorded welcome | The operator **Settings** |
+| Connecting a phone system, CRM or calendar, and what it syncs (which colleagues, departments, whether they become transfer destinations; see [integrations.md](integrations.md)) | That integration's own page under **Tools**, never the Instructions. You can read its state but not change it |
 
 For how to phrase any of these tool fields, see [transfers.md](transfers.md).
 
