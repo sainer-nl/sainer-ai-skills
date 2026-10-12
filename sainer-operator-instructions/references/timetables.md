@@ -30,6 +30,13 @@ open** when you propose blocks, and let the person check you. "This leaves you
 open Monday to Friday, nine to five, and closed at the weekend" catches the
 mistake before it ships. A table of start and end minutes does not.
 
+## A new schedule and its blocks in one change
+
+Create the schedule with a `ref`, and give each block that `$ref` as its
+`timetable`; it is replaced with the new schedule's id when the change is
+applied. For an existing schedule, use its id from the config. A schedule name
+is mapped to its id only when exactly one schedule has that name.
+
 ## Writing the numbers
 
 - **Days** run 0 for Sunday through 6 for Saturday.

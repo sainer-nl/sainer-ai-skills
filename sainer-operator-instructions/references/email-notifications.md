@@ -52,21 +52,28 @@ Comparison is forgiving: case is ignored, surrounding spaces are trimmed, and
 `"5"` matches `5`. Against a list (handled scenarios, or a field that holds
 several values) it matches if any entry does.
 
-### The failure that is invisible
+### A rule on a field that does not exist
 
-**A condition on a key that does not exist never matches, and nothing reports
-it.** No error, no warning, no entry anywhere. The user configures a
-notification, waits for the email, and it silently never comes.
+**A condition on a key that does not exist never matches.** The user configures
+a notification, waits for the email, and it never comes.
 
 So before writing a rule, check the operator's config for the field you are
-about to key on, and use its exact key. If the field the user is describing does
-not exist yet, propose it *first* and say the notification depends on it. A
-rule pointing at a field nobody created is worse than no rule, because it looks
-finished.
+about to key on, and use its exact key. A key that exists nowhere is rejected
+when the change is applied; a key that only differs in case, or a captured
+field named by its label, is corrected to the key. If the field the user is
+describing does not exist yet, propose it *first*, in the same change, and say
+the notification depends on it.
 
 The same care applies to the value: a rule reading `equals "ICT"` against a
 field whose allowed values are `ict` and `overig` is fine (case is ignored), but
 `equals "IT"` matches nothing forever.
+
+A **handled scenario** is compared by the scenario's **id**. Take the id from
+the operator's config. When the same change also creates the scenario, give
+that create a `ref` and use the `$ref` as the value; it is replaced with the
+new id when the change is applied. A scenario name is mapped to its id only
+when exactly one active scenario has that name; otherwise the change is
+rejected, so prefer the id.
 
 ## The subject
 
