@@ -64,6 +64,7 @@ have not read.
 | [call-analysis.md](references/call-analysis.md) | Something the business needs to know about every call — custom analysis fields, and what drives a notification rule |
 | [email-notifications.md](references/email-notifications.md) | Emailing colleagues after a call: who gets one, and the rule deciding which calls trigger it |
 | [voice-and-language.md](references/voice-and-language.md) | The operator sounds too cheerful / stiff / rushed; personality, voice, turn-taking, pronunciation, which languages to handle |
+| [integrations.md](references/integrations.md) | The operator is connected to another system (the config has an `integrations` block), or destinations still carry a phone system's generated description |
 
 ---
 
