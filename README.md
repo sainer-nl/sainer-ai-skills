@@ -79,6 +79,9 @@ Issues and pull requests are welcome. Each skill lives in its own top-level fold
 `SKILL.md` (and optional `references/`). Keep skills self-contained and free of any
 non-public, customer-specific, or internal implementation detail.
 
+`sainer-operator-instructions` is a periodically refreshed snapshot of the guide Sainer's
+in-app assistant runs on. Changes for the assistant land in its own repository first.
+
 ## License
 
 [MIT](./LICENSE) © 2026 Sainer. Use, copy, and adapt these skills freely; just keep the
