@@ -212,6 +212,10 @@ Instructions. Three modes:
   operator's typing sound setting being on; with that off this mode is dead
   air, so check it before proposing this.
 
+On the preview model there is no fixed phrase: `default` lets the operator bridge in
+its own words, so only `composed` with a `holdPhrasePrompt`, or `audio_only`, changes
+what the caller hears.
+
 ## Routing guidance
 
 Cross-cutting rules that span destinations. Everything specific to one

@@ -36,6 +36,20 @@ that is right for every caller: making the operator quicker to answer also makes
 it quicker to interrupt someone who paused to think. Change one thing, have them
 listen, then decide.
 
+### The preview model's voice
+
+On the preview model a slightly synthetic timbre is a known trait of the model
+itself, the price of its much better reasoning and logic. No instruction,
+vocabulary or turn-taking change affects it, so never offer one as a fix, and
+never suggest leaving the preview model over it.
+
+Pace and liveliness are different: on the preview model they follow the persona.
+An operator that sounds slow, flat or dull usually has an old-style persona (a list
+of traits, often with words like calm or careful) instead of one written for the
+preview model. The fix is a preview persona, ready-made or rewritten; see
+[preview-model-personas.md](preview-model-personas.md). Call the models "the base
+model" and "the preview model", never by version.
+
 ### Interruption is one switch, and "off" means muted
 
 The app has a single turn-taking switch, **Beller mag onderbreken** (Allow caller

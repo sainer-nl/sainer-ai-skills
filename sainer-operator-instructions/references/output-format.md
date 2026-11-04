@@ -6,6 +6,9 @@ the user picks a ready-made Sainer persona, just say "use the [Name] persona" in
 
 ## Agent Persona (custom only)
 
+This is the base-model format. For an operator on the preview model, write the persona
+in the format of [preview-model-personas.md](preview-model-personas.md) instead.
+
 ```
 ## Agent Persona
 
