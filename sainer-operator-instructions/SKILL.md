@@ -54,6 +54,8 @@ have not read.
 | Use this | When |
 |-----------|------|
 | [output-format.md](references/output-format.md) | Writing the Instructions or a persona — the required format |
+| [preview-model-personas.md](references/preview-model-personas.md) | Any persona work on an operator on the preview model, and moving a persona to the preview model |
+| [preview-model-instructions.md](references/preview-model-instructions.md) | Writing or changing the Instructions of an operator on the preview model, and improving them after the move |
 | [where-things-belong.md](references/where-things-belong.md) | Something surfaced and you are unsure which piece owns it — or whether it is the customer's to change at all |
 | [transfers.md](references/transfers.md) | Destinations, routing guidance, when to connect a caller |
 | [data-collection.md](references/data-collection.md) | Fields and scenarios — capturing details from callers |
@@ -65,6 +67,26 @@ have not read.
 | [email-notifications.md](references/email-notifications.md) | Emailing colleagues after a call: who gets one, and the rule deciding which calls trigger it |
 | [voice-and-language.md](references/voice-and-language.md) | The operator sounds too cheerful / stiff / rushed; personality, voice, turn-taking, pronunciation, which languages to handle |
 | [integrations.md](references/integrations.md) | The operator is connected to another system (the config has an `integrations` block), or destinations still carry a phone system's generated description |
+
+---
+
+## The base model and the preview model
+
+Every operator runs on one of two live models, switched in the operator's settings.
+The **preview model** reasons and follows instructions noticeably better, and it is
+where Sainer's improvements land first. It is worth recommending when an operator
+handles complex calls (several routes, data collection, lookups) or keeps making
+reasoning mistakes on the base model. Its voice is slightly more synthetic, which no
+setting changes.
+
+The preview model is set up differently from the base model: its own personas, and
+Instructions written for a model that follows them literally. Ask which model the
+operator runs on if you do not know. Only on the preview model (or when the user is
+about to switch) do you need those details: read
+[preview-model-personas.md](references/preview-model-personas.md) for the persona and
+[preview-model-instructions.md](references/preview-model-instructions.md) for the
+Instructions then. On a base-model operator, work as the rest of this guide describes.
+Call them "the base model" and "the preview model", never by version.
 
 ---
 
@@ -99,7 +121,10 @@ literally, exceptions and all.
 **Never write pronunciation or "how to speak" rules.** No "articulate clearly",
 no "speak slowly", and never a phonetic respelling in prose — the model reads it
 literally and says the letter-soup out loud. Pronunciation lives in the
-Vocabulary, and only there.
+Vocabulary, and only there. The one exception is the voice direction in a
+preview-model persona (the style of the voice and one rhythm moment), which is
+how that model's pace and tone are steered; see
+[preview-model-personas.md](references/preview-model-personas.md).
 
 **Do not repeat what the operator already does.** It already knows not to invent
 information, not to invent people or departments it cannot reach, to store only
@@ -126,10 +151,15 @@ Ask one phase at a time. Do not dump every question at once.
 
 **1 — The business.** What the company does. The use case (after-hours,
 reception, support, sales routing). The opening language, and whether it should
-handle others. Any sensitive context — healthcare, legal, financial.
+handle others. Any sensitive context — healthcare, legal, financial. Which live
+model the operator runs on, the base model or the preview model.
 
 **2 — Persona.** Ask whether they want a custom persona or one of Sainer's
-ready-made ones, and recommend one that fits. Ready-made personas:
+ready-made ones, and recommend one that fits. Which ready-made personas exist
+depends on the live model. On the preview model, read
+[preview-model-personas.md](references/preview-model-personas.md) first: it has
+its own six personas and its own persona format. The base model's ready-made
+personas:
 
 | Persona | Feel | Good for |
 |---------|------|----------|
